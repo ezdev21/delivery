@@ -38,7 +38,7 @@ Route::prefix('product')->group(function(){
 });
 
 Route::prefix('cart')->group(function(){
-  Route::get('cartitems',[ProductController::class,'cartItems']);
+  Route::get('cartitems',[CartController::class,'cartItems']);
 });
 
 Route::prefix('customer')->group(function(){

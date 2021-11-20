@@ -15,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {  
-      $categories=Category::withCount('products')->orderBy('products_count')->get();
+      $categories=Category::withCount('products')->orderBy('products_count','desc')->with('products')->get();
       return response()->json(['categories'=>$categories]);
     }
 

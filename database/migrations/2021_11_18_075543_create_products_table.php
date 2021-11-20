@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->unsignedInteger('quantity');
             $table->string('photo')->nullable();
-            $table->string('slug')->unique();
+            $table->string('slug')->unique()->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
         });
