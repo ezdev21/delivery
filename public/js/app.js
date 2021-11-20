@@ -38309,7 +38309,7 @@ var render = function () {
         ),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "py-1 pr-5 mx-2 mx-5" }, [
+      _c("div", { staticClass: "py-1" }, [
         _c(
           "div",
           {
@@ -38533,7 +38533,8 @@ var render = function () {
                       _c(
                         "a",
                         {
-                          staticClass: "mx-2 rounded px-2 py-1 my-auto",
+                          staticClass:
+                            "no-underline hover:no-underline mx-2 rounded px-2 py-1 my-auto",
                           attrs: { href: "/login" },
                         },
                         [_vm._v("sign in")]
@@ -38543,7 +38544,7 @@ var render = function () {
                         "a",
                         {
                           staticClass:
-                            "bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto",
+                            "no-underline hover:no-underline bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto",
                           attrs: { href: "/register" },
                         },
                         [_vm._v("sign up")]
@@ -38641,32 +38642,39 @@ var render = function () {
               _vm._m(7),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "flex" }, [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "h-8 w-8",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor",
-                      },
-                    },
-                    [
-                      _c("path", {
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex no-underline hover:no-underline hover:text-white",
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-8 w-8",
                         attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
+                          xmlns: "http://www.w3.org/2000/svg",
+                          fill: "none",
+                          viewBox: "0 0 24 24",
+                          stroke: "currentColor",
                         },
-                      }),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Contact Us")]),
-                ]),
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                            "stroke-width": "2",
+                            d: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
+                          },
+                        }),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Contact Us")]),
+                  ]
+                ),
               ]),
             ]),
           ]),
@@ -38734,7 +38742,8 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "mx-auto text-black no-underline",
+              staticClass:
+                "no-underline hover:no-underline hover:text-white mx-auto text-black no-underline",
               attrs: { href: "/" },
             },
             [_vm._v("Home")]
@@ -38745,7 +38754,8 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "mx-auto text-black no-underline",
+              staticClass:
+                "no-underline hover:no-underline hover:text-white mx-auto text-black no-underline",
               attrs: { href: "/" },
             },
             [_vm._v("News")]
@@ -38756,7 +38766,8 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "mx-auto text-black no-underline",
+              staticClass:
+                "no-underline hover:no-underline hover:text-white mx-auto text-black no-underline",
               attrs: { href: "/" },
             },
             [_vm._v("Vendors")]
@@ -38767,7 +38778,8 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "mx-auto text-black no-underline",
+              staticClass:
+                "no-underline hover:no-underline hover:text-white mx-auto text-black no-underline",
               attrs: { href: "/" },
             },
             [_vm._v("Suppliers")]
@@ -38781,7 +38793,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "mx-3" }, [
-      _c("button", [_vm._v("\n          Become a Seller\n        ")]),
+      _c(
+        "a",
+        {
+          staticClass: "no-underline hover:no-underline hover:text-white",
+          attrs: { href: "#" },
+        },
+        [_vm._v("\n          Become a Seller\n        ")]
+      ),
     ])
   },
 ]

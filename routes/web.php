@@ -32,6 +32,10 @@ Route::prefix('product')->group(function(){
   Route::post('search',[ProductController::class,'search'])->name('product.search');
 });
 
+Route::prefix('cart')->group(function(){
+  Route::post('cartitems',[ProductController::class,'cartItems']);
+});
+
 Route::prefix('customer')->group(function(){
   Route::post('search',[CustomerController::class,'search']);
 });

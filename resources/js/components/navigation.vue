@@ -5,7 +5,7 @@
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
    </svg>
   </div>
-  <div class="py-1 pr-5 mx-2 mx-5">
+  <div class="py-1">
     <div class="flex justify-between py-2 border-b-2 border-green-600">
     <div class="rounded-4xl my-auto py-auto mr-5">
       <form @submit.prevent="search" class="flex">
@@ -49,8 +49,8 @@
        </button>   
      </div>
      <div v-else class="flex font-medium text-white text-xl w-full my-auto">
-     <a href="/login" class="mx-2 rounded px-2 py-1 my-auto">sign in</a>
-     <a href="/register" class="bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto">sign up</a>  
+     <a href="/login" class="no-underline hover:no-underline mx-2 rounded px-2 py-1 my-auto">sign in</a>
+     <a href="/register" class="no-underline hover:no-underline bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto">sign up</a>  
      </div> 
      <div v-if="userDropdownMenu" class="fixed z-20 text-xl bg-gray-100 top-2 right-2">
       <ul>
@@ -80,26 +80,26 @@
     </div>
     <div class="text-lg my-auto">
       <ul class="flex my-auto">
-       <li class="mx-4"><a class="mx-auto text-black no-underline" href="/">Home</a></li>
-       <li class="mx-4"><a class="mx-auto text-black no-underline" href="/">News</a></li>
-       <li class="mx-4"><a class="mx-auto text-black no-underline" href="/">Vendors</a></li>
-       <li class="mx-4 "><a class="mx-auto text-black no-underline" href="/">Suppliers</a></li>
+       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-white mx-auto text-black no-underline" href="/">Home</a></li>
+       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-white mx-auto text-black no-underline" href="/">News</a></li>
+       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-white mx-auto text-black no-underline" href="/">Vendors</a></li>
+       <li class="mx-4 "><a class="no-underline hover:no-underline hover:text-white mx-auto text-black no-underline" href="/">Suppliers</a></li>
       </ul>
     </div>
     <div class="my-auto text-xl">
      <ul class="flex">
        <li class="mx-3">
-         <button>
+         <a href="#" class="no-underline hover:no-underline hover:text-white">
            Become a Seller
-         </button>
+         </a>
        </li>
        <li>
-        <button class="flex">
+        <a class="flex no-underline hover:no-underline hover:text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
           <span>Contact Us</span>
-        </button>
+        </a>
       </li>
      </ul>
     </div>
