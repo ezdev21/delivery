@@ -14,7 +14,7 @@
      </li>    
     </ul> 
    </div>
-<div v-if="notificationPopup" @click="notificationPopup=false" class="absolute -inset-x-0 -inset-y-full opacity-50 bg-black z-10"></div> 
+<!-- <div v-if="notificationPopup" @click="notificationPopup=false" class="absolute -inset-0 opacity-50 bg-black z-10"></div>  -->
   </div>  
 </template>
 <script>

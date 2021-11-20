@@ -2310,7 +2310,7 @@ __webpack_require__.r(__webpack_exports__);
       userDropdownMenu: false
     };
   },
-  created: function created() {
+  beforeCreated: function beforeCreated() {
     var _this = this;
 
     axios.get('/navigation', {
@@ -38226,17 +38226,6 @@ var render = function () {
           ),
         ])
       : _vm._e(),
-    _vm._v(" "),
-    _vm.cartPopup
-      ? _c("div", {
-          staticClass: "absolute z-10 inset-0 bg-black opacity-50",
-          on: {
-            click: function ($event) {
-              _vm.cartPopup = false
-            },
-          },
-        })
-      : _vm._e(),
   ])
 }
 var staticRenderFns = []
@@ -38424,7 +38413,7 @@ var render = function () {
                     "button",
                     {
                       staticClass:
-                        "bg-second capitalize rounded-r-3xl lg:rounded-r-3xl xl:rounded-r-3xl 2xl:rounded-r-3xl text-xl lg:text-3xl xl:text-2xl 2xl:text-2xl py-2.5 px-5 my-auto",
+                        "bg-second capitalize rounded-r-3xl lg:rounded-r-3xl xl:rounded-r-3xl 2xl:rounded-r-3xl text-xl lg:text-3xl xl:text-2xl 2xl:text-2xl py-2.5 px-4 my-auto",
                       attrs: { type: "submit" },
                     },
                     [
@@ -38459,14 +38448,18 @@ var render = function () {
             _c("div", { staticClass: "my-auto flex mx-14" }, [
               _c(
                 "div",
-                [_c("saved-component", { attrs: { userId: _vm.userId } })],
+                [
+                  _c("likedproducts-component", {
+                    attrs: { userId: _vm.userId },
+                  }),
+                ],
                 1
               ),
               _vm._v(" "),
               _c(
                 "div",
                 [
-                  _c("notifications-component", {
+                  _c("notification-component", {
                     attrs: { userId: _vm.userId },
                   }),
                 ],
@@ -38562,7 +38555,7 @@ var render = function () {
                   ])
                 : _c(
                     "div",
-                    { staticClass: "flex text-white text-2xl w-full my-auto" },
+                    { staticClass: "flex text-white text-xl w-full my-auto" },
                     [
                       _c(
                         "a",
@@ -38937,8 +38930,7 @@ var render = function () {
     _vm._v(" "),
     _vm.notificationPopup
       ? _c("div", {
-          staticClass:
-            "absolute -inset-x-0 -inset-y-full opacity-50 bg-black z-10",
+          staticClass: "absolute -inset-0 opacity-50 bg-black z-10",
           on: {
             click: function ($event) {
               _vm.notificationPopup = false

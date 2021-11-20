@@ -19,7 +19,7 @@
     </li>
     </ul>    
    </div>
-   <div v-if="cartPopup" @click="cartPopup=false" class="absolute z-10 inset-0 bg-black opacity-50"></div>
+   <!-- <div v-if="cartPopup" @click="cartPopup=false" class="absolute z-10 -inset-0 bg-black opacity-50"></div> -->
   </div> 
 </template>
 <script>
