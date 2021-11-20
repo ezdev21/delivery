@@ -38,11 +38,11 @@
         </form>  
         <navigation-component @auth user-id="{{Auth::user()->id}}"@endauth />  
       </div>      
-  <main class="pb-4 px-4">
+  <main class="py-2 px-4">
     @yield('content')
   </main>
   <footer>
-    
+
   </footer>
  </div>
 </body>

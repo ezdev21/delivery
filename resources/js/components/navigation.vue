@@ -121,7 +121,7 @@ export default {
     }
    },
    beforeCreated(){
-    axios.get('/navigation',{params:{userId:this.userId}})
+    axios.get('/user/navigation',{params:{userId:this.userId}})
     .then(res=>{
       this.user=res.data.user;
       this.categories=res.data.categories;

@@ -14,26 +14,34 @@
      </svg>
     </button>
    </div>
-  <div class="w-1/3 h-full">
+   <div class="w-1/3 h-full">
     <img class="w-full h-full m-1" src="/storage/logo/delivery.jpg">
     <img class="w-full h-full m-1" src="/storage/logo/delivery.jpg">
+   </div>
   </div>
-  </div>
-  <div>
+  <div class="relative">
     <h1 class="capitalize text-2xl font-medium">all categories</h1>
-    <button>
-     <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-600 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button class="absolute top-1/2 right-0">
+     <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
      </svg>
     </button>
-    <div v-for="category in categories" :key="category.id" class="flex">
+    <div class="flex">
       <div class="relative m-2">
-        <img src="storage/logo/delivery.jpg" class="w-36 h-32 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl">
-        <h1 class="absolute bottom-5 right-5 text-white text-2xl font-medium"></h1>
+        <img src="storage/logo/delivery.jpg" class="w-48 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl">
+        <h1 class="absolute bottom-5 right-5 text-first text-2xl font-medium">category</h1>
+      </div>
+      <div class="relative m-2">
+        <img src="storage/logo/delivery.jpg" class="w-36 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl">
+        <h1 class="absolute bottom-5 right-5 text-first text-2xl font-medium">category</h1>
+      </div>
+      <div class="relative m-2">
+        <img src="storage/logo/delivery.jpg" class="w-36 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl">
+        <h1 class="absolute bottom-5 right-5 text-first text-2xl font-medium">category</h1>
       </div>
     </div>
-    <button>
-     <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-600 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button class="absolute top-1/2 left-0">
+     <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
      </svg>
     </button>
@@ -79,14 +87,16 @@
     </div>
   </div>
   <div>
-    <div v-for="category in categories" :key="category.id" class="">
-      <h1>{{category.name}}</h1>
-      <div v-for="product in category.products" :key="product.id" class="flex flex-wrap">
-        <div>
-         <img src="/storage/logo/delivery.jpg" class="w-36 hover:shadow-xl">
-         <p>{{product.name}}</p>
-         <p>${{product.price}}</p>
-         <p>{{product.vendor.name}}</p>
+    <div v-for="category in categories" :key="category.id" class="flex">
+      <h1 class="text-gray-700 font-semibold text-2xl">{{category.name}}</h1>
+      <div v-for="x in 2" :key="x" class="flex">
+        <div class="m-2 hover:shadow-xl">
+         <img src="/storage/logo/delivery.jpg" class="w-48">
+          <div>
+           <p>{{product.name}}</p>
+           <p>${{product.price}}</p>
+           <p>{{product.vendor.name}}</p>
+          </div>
          <div class="flex">
           <addtocart-component />
           <showproduct-component />

@@ -2168,7 +2168,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/cartitems', {
+    axios.get('/cart/cartitems', {
       params: {
         userId: this.userId
       }
@@ -2319,11 +2319,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
   data: function data() {
     return {
-      categories: ['', '', '', '']
+      categories: []
     };
   },
   created: function created() {
@@ -2511,7 +2521,7 @@ __webpack_require__.r(__webpack_exports__);
   beforeCreated: function beforeCreated() {
     var _this = this;
 
-    axios.get('/navigation', {
+    axios.get('/user/navigation', {
       params: {
         userId: this.userId
       }
@@ -2578,7 +2588,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/notifications', {
+    axios.get('/user/notifications', {
       params: {
         userId: this.userId
       }
@@ -2590,7 +2600,7 @@ __webpack_require__.r(__webpack_exports__);
     unreadNotification: function unreadNotification(notificationId) {
       var _this2 = this;
 
-      axios.post('/notification/unread', {
+      axios.post('/user/notification/unread', {
         notificationId: notificationId,
         userId: this.userId
       }).then(function (res) {
@@ -2617,7 +2627,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -38712,13 +38721,13 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "button",
-    { staticClass: "cursor-pointer rounded", on: { click: _vm.addToCart } },
+    { staticClass: "cursor-pointer", on: { click: _vm.addToCart } },
     [
       _c(
         "svg",
         {
           staticClass: "text-gray-500 h-6 w-6",
-          class: [_vm.productInCart ? "text-green-500" : "text-pink-500"],
+          class: [_vm.productInCart ? "" : ""],
           attrs: {
             xmlns: "http://www.w3.org/2000/svg",
             fill: "none",
@@ -38835,7 +38844,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "flex w-full" }, [
-      _c("div", { staticClass: "w-2/3 relative" }, [
+      _c("div", { staticClass: "w-2/3 relative m-2" }, [
         _c("button", { staticClass: "absolute top-1/2 left-0" }, [
           _c(
             "svg",
@@ -38895,71 +38904,63 @@ var render = function () {
       _vm._m(0),
     ]),
     _vm._v(" "),
-    _c(
-      "div",
-      [
-        _c("h1", { staticClass: "capitalize text-2xl font-medium" }, [
-          _vm._v("all categories"),
-        ]),
-        _vm._v(" "),
-        _c("button", [
-          _c(
-            "svg",
-            {
-              staticClass: "text-gray-600 h-8 w-8",
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
-              },
+    _c("div", { staticClass: "relative" }, [
+      _c("h1", { staticClass: "capitalize text-2xl font-medium" }, [
+        _vm._v("all categories"),
+      ]),
+      _vm._v(" "),
+      _c("button", { staticClass: "absolute top-1/2 right-0" }, [
+        _c(
+          "svg",
+          {
+            staticClass: "text-gray-500 h-8 w-8",
+            attrs: {
+              xmlns: "http://www.w3.org/2000/svg",
+              fill: "none",
+              viewBox: "0 0 24 24",
+              stroke: "currentColor",
             },
-            [
-              _c("path", {
-                attrs: {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M15 19l-7-7 7-7",
-                },
-              }),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _vm._l(_vm.categories, function (category) {
-          return _c("div", { key: category.id, staticClass: "flex" }, [
-            _vm._m(1, true),
-          ])
-        }),
-        _vm._v(" "),
-        _c("button", [
-          _c(
-            "svg",
-            {
-              staticClass: "text-gray-600 h-8 w-8",
+          },
+          [
+            _c("path", {
               attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
+                "stroke-linecap": "round",
+                "stroke-linejoin": "round",
+                "stroke-width": "2",
+                d: "M15 19l-7-7 7-7",
               },
+            }),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("button", { staticClass: "absolute top-1/2 left-0" }, [
+        _c(
+          "svg",
+          {
+            staticClass: "text-gray-500 h-8 w-8",
+            attrs: {
+              xmlns: "http://www.w3.org/2000/svg",
+              fill: "none",
+              viewBox: "0 0 24 24",
+              stroke: "currentColor",
             },
-            [
-              _c("path", {
-                attrs: {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M9 5l7 7-7 7",
-                },
-              }),
-            ]
-          ),
-        ]),
-      ],
-      2
-    ),
+          },
+          [
+            _c("path", {
+              attrs: {
+                "stroke-linecap": "round",
+                "stroke-linejoin": "round",
+                "stroke-width": "2",
+                d: "M9 5l7 7-7 7",
+              },
+            }),
+          ]
+        ),
+      ]),
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -38975,20 +38976,24 @@ var render = function () {
               staticClass: "text-first h-12 w-12",
               attrs: {
                 xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 20 20",
-                fill: "currentColor",
+                fill: "none",
+                viewBox: "0 0 24 24",
+                stroke: "currentColor",
               },
             },
             [
               _c("path", {
                 attrs: {
-                  d: "M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z",
+                  d: "M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z",
                 },
               }),
               _vm._v(" "),
               _c("path", {
                 attrs: {
-                  d: "M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z",
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round",
+                  "stroke-width": "2",
+                  d: "M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0",
                 },
               }),
             ]
@@ -39148,42 +39153,42 @@ var render = function () {
       _vm._l(_vm.categories, function (category) {
         return _c(
           "div",
-          { key: category.id },
+          { key: category.id, staticClass: "flex" },
           [
-            _c("h1", [_vm._v(_vm._s(category.name))]),
+            _c("h1", { staticClass: "text-gray-700 font-semibold text-2xl" }, [
+              _vm._v(_vm._s(category.name)),
+            ]),
             _vm._v(" "),
-            _vm._l(category.products, function (product) {
-              return _c(
-                "div",
-                { key: product.id, staticClass: "flex flex-wrap" },
-                [
+            _vm._l(2, function (x) {
+              return _c("div", { key: x, staticClass: "flex" }, [
+                _c("div", { staticClass: "m-2 hover:shadow-xl" }, [
+                  _c("img", {
+                    staticClass: "w-48",
+                    attrs: { src: "/storage/logo/delivery.jpg" },
+                  }),
+                  _vm._v(" "),
                   _c("div", [
-                    _c("img", {
-                      staticClass: "w-36 hover:shadow-xl",
-                      attrs: { src: "/storage/logo/delivery.jpg" },
-                    }),
+                    _c("p", [_vm._v(_vm._s(_vm.product.name))]),
                     _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(product.name))]),
+                    _c("p", [_vm._v("$" + _vm._s(_vm.product.price))]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("$" + _vm._s(product.price))]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(product.vendor.name))]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "flex" },
-                      [
-                        _c("addtocart-component"),
-                        _vm._v(" "),
-                        _c("showproduct-component"),
-                        _vm._v(" "),
-                        _c("likeproduct-component"),
-                      ],
-                      1
-                    ),
+                    _c("p", [_vm._v(_vm._s(_vm.product.vendor.name))]),
                   ]),
-                ]
-              )
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "flex" },
+                    [
+                      _c("addtocart-component"),
+                      _vm._v(" "),
+                      _c("showproduct-component"),
+                      _vm._v(" "),
+                      _c("likeproduct-component"),
+                    ],
+                    1
+                  ),
+                ]),
+              ])
             }),
           ],
           2
@@ -39214,17 +39219,57 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "relative m-2" }, [
-      _c("img", {
-        staticClass:
-          "w-36 h-32 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl",
-        attrs: { src: "storage/logo/delivery.jpg" },
-      }),
+    return _c("div", { staticClass: "flex" }, [
+      _c("div", { staticClass: "relative m-2" }, [
+        _c("img", {
+          staticClass:
+            "w-48 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl",
+          attrs: { src: "storage/logo/delivery.jpg" },
+        }),
+        _vm._v(" "),
+        _c(
+          "h1",
+          {
+            staticClass:
+              "absolute bottom-5 right-5 text-first text-2xl font-medium",
+          },
+          [_vm._v("category")]
+        ),
+      ]),
       _vm._v(" "),
-      _c("h1", {
-        staticClass:
-          "absolute bottom-5 right-5 text-white text-2xl font-medium",
-      }),
+      _c("div", { staticClass: "relative m-2" }, [
+        _c("img", {
+          staticClass:
+            "w-36 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl",
+          attrs: { src: "storage/logo/delivery.jpg" },
+        }),
+        _vm._v(" "),
+        _c(
+          "h1",
+          {
+            staticClass:
+              "absolute bottom-5 right-5 text-first text-2xl font-medium",
+          },
+          [_vm._v("category")]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "relative m-2" }, [
+        _c("img", {
+          staticClass:
+            "w-36 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl",
+          attrs: { src: "storage/logo/delivery.jpg" },
+        }),
+        _vm._v(" "),
+        _c(
+          "h1",
+          {
+            staticClass:
+              "absolute bottom-5 right-5 text-first text-2xl font-medium",
+          },
+          [_vm._v("category")]
+        ),
+      ]),
     ])
   },
 ]
@@ -39931,7 +39976,7 @@ var render = function () {
       _c(
         "svg",
         {
-          staticClass: "text-gray h-6 w-6",
+          staticClass: "text-gray-500 h-6 w-6",
           attrs: {
             xmlns: "http://www.w3.org/2000/svg",
             fill: "none",
@@ -39949,15 +39994,6 @@ var render = function () {
             },
           }),
         ]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "absolute -bottom-1 -right-2 w-6 h-6 font-semibold text-white rounded-full bg-green-700 text-white",
-        },
-        [_vm._v("0")]
       ),
     ]),
   ])
@@ -40004,19 +40040,19 @@ var render = function () {
               "stroke-linecap": "round",
               "stroke-linejoin": "round",
               "stroke-width": "2",
-              d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+              d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z",
+            },
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "stroke-width": "2",
+              d: "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z",
             },
           }),
         ]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "absolute -bottom-1 -right-2 w-6 h-6 font-semibold text-white rounded-full bg-green-700 text-white",
-        },
-        [_vm._v("0")]
       ),
     ]),
   ])
