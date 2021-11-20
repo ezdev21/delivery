@@ -38383,7 +38383,7 @@ var render = function () {
                     "button",
                     {
                       staticClass:
-                        "bg-second capitalize rounded-r-3xl lg:rounded-r-3xl xl:rounded-r-3xl 2xl:rounded-r-3xl text-xl lg:text-3xl xl:text-2xl 2xl:text-2xl py-2.5 px-4 my-auto",
+                        "bg-green-700 capitalize rounded-r-3xl lg:rounded-r-3xl xl:rounded-r-3xl 2xl:rounded-r-3xl text-xl lg:text-3xl xl:text-2xl 2xl:text-2xl py-2.5 px-4 my-auto",
                       attrs: { type: "submit" },
                     },
                     [
@@ -38544,7 +38544,7 @@ var render = function () {
                         "a",
                         {
                           staticClass:
-                            "no-underline hover:no-underline bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto",
+                            "no-underline hover:no-underline hover:text-white bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto",
                           attrs: { href: "/register" },
                         },
                         [_vm._v("sign up")]

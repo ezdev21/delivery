@@ -1,6 +1,13 @@
 @extends('layouts.app')
 @section('content')
  <div>
-  <p>hello</p> 
+   <home-component/>
+  <div class="flex">
+    <img src="" alt="">
+    <div>
+     <img src="" alt="">
+     <img src="" alt="">
+    </div>
+  </div> 
 </div>  
 @endsection

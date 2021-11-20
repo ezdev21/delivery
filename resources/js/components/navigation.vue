@@ -14,7 +14,7 @@
           <option v-for="category in categories" :key="category.id" value="">{{category.name}}</option>
         </select>
        <input type="text" v-model="searchQuery" required class="w-96 py-2.5 px-3 text-lg lg:text-xl xl:text-xl 2xl:text-xl outline-none focus:border-b-2 border-tiruhakim" placeholder="I'am shopping for...">
-       <button type="submit" class="bg-second capitalize rounded-r-3xl lg:rounded-r-3xl xl:rounded-r-3xl 2xl:rounded-r-3xl text-xl lg:text-3xl xl:text-2xl 2xl:text-2xl py-2.5 px-4 my-auto">
+       <button type="submit" class="bg-green-700 capitalize rounded-r-3xl lg:rounded-r-3xl xl:rounded-r-3xl 2xl:rounded-r-3xl text-xl lg:text-3xl xl:text-2xl 2xl:text-2xl py-2.5 px-4 my-auto">
          <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
@@ -50,7 +50,7 @@
      </div>
      <div v-else class="flex font-medium text-white text-xl w-full my-auto">
      <a href="/login" class="no-underline hover:no-underline mx-2 rounded px-2 py-1 my-auto">sign in</a>
-     <a href="/register" class="no-underline hover:no-underline bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto">sign up</a>  
+     <a href="/register" class="no-underline hover:no-underline hover:text-white bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto">sign up</a>  
      </div> 
      <div v-if="userDropdownMenu" class="fixed z-20 text-xl bg-gray-100 top-2 right-2">
       <ul>
