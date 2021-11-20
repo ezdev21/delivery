@@ -79,6 +79,11 @@
     <div v-for="category in categories" :key="category.id" class="">
       <h1 class="text-gray-700 capitalize font-semibold text-2xl">{{category.name}}</h1>
       <div class="flex">
+        <button class="absolute top-1/2 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        </button>
         <a v-for="product in category.products" :key="product.id" :href="`/product/show/${product.id}`">
         <div class="m-2 hover:shadow-xl">
          <img src="/storage/logo/delivery.jpg" class="w-64">
@@ -87,7 +92,7 @@
            <p class="text-first text-xl text-center">${{product.price}}</p>
            <p class="text-blue-500 text-xl text-center">{{product.name}}</p>
           </div>
-         <div class="flex mx-auto">
+         <div class="flex w-max mx-auto">
           <addtocart-component />
           <showproduct-component />
           <likeproduct-component />
@@ -97,6 +102,11 @@
          </div>
         </div>
       </a>
+      <button class="absolute top-1/2 left-0">
+       <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+       </svg>
+      </button>
       </div>
     </div>
  </div>  

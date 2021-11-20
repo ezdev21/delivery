@@ -45,10 +45,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-      $id=$product->category_id;
-      $recommendedProducts=Product::where('category_id',$id)->latest()->get();
+      $product=Product::find($id);
+      $recommendedProducts=Product::where('category_id',$product->category_id)->latest()->get();
       return view('product.show',compact('product','recommendedProducts'));
     }
 

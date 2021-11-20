@@ -38,7 +38,7 @@ Route::prefix('product')->group(function(){
   Route::post('store',[ProductController::class,'store']);
   Route::get('edit/{id}',[ProductController::class,'edit']);
   Route::patch('update',[ProductController::class,'update']);
-  Route::get('show/{id}',[ProductController::class,'show']);
+  Route::get('show/{id}',[ProductController::class,'show'])->name('product.show');
   Route::post('search',[ProductController::class,'search'])->name('product.search');
 });
 
