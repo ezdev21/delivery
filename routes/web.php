@@ -34,6 +34,11 @@ Route::prefix('category')->group(function(){
 });
 
 Route::prefix('product')->group(function(){
+  Route::get('create',[ProductController::class,'create']);
+  Route::post('store',[ProductController::class,'store']);
+  Route::get('edit/{id}',[ProductController::class,'edit']);
+  Route::patch('update',[ProductController::class,'update']);
+  Route::get('show/{id}',[ProductController::class,'show']);
   Route::post('search',[ProductController::class,'search'])->name('product.search');
 });
 

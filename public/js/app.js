@@ -2319,6 +2319,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
   data: function data() {
@@ -38716,7 +38719,7 @@ var render = function () {
       _c(
         "svg",
         {
-          staticClass: "text-gray-500 h-6 w-6",
+          staticClass: "text-gray-500 h-5 w-5 mx-1.5",
           class: [_vm.productInCart ? "" : ""],
           attrs: {
             xmlns: "http://www.w3.org/2000/svg",
@@ -38832,44 +38835,82 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "flex w-full" }, [
-      _c("div", { staticClass: "w-2/3 relative m-2" }, [
-        _c("button", { staticClass: "absolute top-1/2 left-0" }, [
-          _c(
-            "svg",
-            {
-              staticClass: "text-gray-600 h-8 w-8",
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
-              },
-            },
-            [
-              _c("path", {
+  return _c(
+    "div",
+    [
+      _c("div", { staticClass: "flex" }, [
+        _c("div", { staticClass: "w-2/3 relative m-2" }, [
+          _c("button", { staticClass: "absolute top-1/2 left-0" }, [
+            _c(
+              "svg",
+              {
+                staticClass: "text-gray-600 h-8 w-8",
                 attrs: {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M15 19l-7-7 7-7",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  stroke: "currentColor",
                 },
-              }),
-            ]
-          ),
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "2",
+                    d: "M15 19l-7-7 7-7",
+                  },
+                }),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "w-full",
+            attrs: { src: "storage/logo/delivery.jpg" },
+          }),
+          _vm._v(" "),
+          _c("button", { staticClass: "absolute top-1/2 right-0" }, [
+            _c(
+              "svg",
+              {
+                staticClass: "text-gray-600 h-8 w-8",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  stroke: "currentColor",
+                },
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "2",
+                    d: "M9 5l7 7-7 7",
+                  },
+                }),
+              ]
+            ),
+          ]),
         ]),
         _vm._v(" "),
-        _c("img", {
-          staticClass: "w-full",
-          attrs: { src: "storage/logo/delivery.jpg" },
-        }),
+        _vm._m(0),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "relative" }, [
+        _c(
+          "h1",
+          { staticClass: "capitalize text-gray-600 text-2xl font-medium" },
+          [_vm._v("all categories")]
+        ),
         _vm._v(" "),
         _c("button", { staticClass: "absolute top-1/2 right-0" }, [
           _c(
             "svg",
             {
-              staticClass: "text-gray-600 h-8 w-8",
+              staticClass: "text-gray-500 h-8 w-8",
               attrs: {
                 xmlns: "http://www.w3.org/2000/svg",
                 fill: "none",
@@ -38889,322 +38930,326 @@ var render = function () {
             ]
           ),
         ]),
-      ]),
-      _vm._v(" "),
-      _vm._m(0),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "relative" }, [
-      _c(
-        "h1",
-        { staticClass: "capitalize text-gray-600 text-2xl font-medium" },
-        [_vm._v("all categories")]
-      ),
-      _vm._v(" "),
-      _c("button", { staticClass: "absolute top-1/2 right-0" }, [
+        _vm._v(" "),
         _c(
-          "svg",
-          {
-            staticClass: "text-gray-500 h-8 w-8",
-            attrs: {
-              xmlns: "http://www.w3.org/2000/svg",
-              fill: "none",
-              viewBox: "0 0 24 24",
-              stroke: "currentColor",
-            },
-          },
-          [
-            _c("path", {
-              attrs: {
-                "stroke-linecap": "round",
-                "stroke-linejoin": "round",
-                "stroke-width": "2",
-                d: "M9 5l7 7-7 7",
-              },
-            }),
-          ]
+          "div",
+          { staticClass: "flex m-2" },
+          _vm._l(_vm.categories, function (category) {
+            return _c(
+              "div",
+              { key: category.id, staticClass: "relative m-2" },
+              [
+                _c("img", {
+                  staticClass:
+                    "w-64 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl",
+                  attrs: { src: "storage/logo/delivery.jpg" },
+                }),
+                _vm._v(" "),
+                _c(
+                  "h1",
+                  {
+                    staticClass:
+                      "absolute bottom-5 right-5 text-first text-2xl font-medium",
+                  },
+                  [_vm._v(_vm._s(category.name))]
+                ),
+              ]
+            )
+          }),
+          0
         ),
+        _vm._v(" "),
+        _c("button", { staticClass: "absolute top-1/2 left-0" }, [
+          _c(
+            "svg",
+            {
+              staticClass: "text-gray-500 h-8 w-8",
+              attrs: {
+                xmlns: "http://www.w3.org/2000/svg",
+                fill: "none",
+                viewBox: "0 0 24 24",
+                stroke: "currentColor",
+              },
+            },
+            [
+              _c("path", {
+                attrs: {
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round",
+                  "stroke-width": "2",
+                  d: "M15 19l-7-7 7-7",
+                },
+              }),
+            ]
+          ),
+        ]),
       ]),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "flex my-2" },
-        _vm._l(_vm.categories, function (category) {
-          return _c("div", { key: category.id, staticClass: "relative m-2" }, [
-            _c("img", {
-              staticClass:
-                "w-48 hover:shadow-xl hover:rounded-tl-3xl hover:rounded-br-3xl",
-              attrs: { src: "storage/logo/delivery.jpg" },
-            }),
-            _vm._v(" "),
+        {
+          staticClass:
+            "flex justify-evenly border-2 border-gray-400 my-2 mx-4 py-4",
+        },
+        [
+          _c("div", [
             _c(
-              "h1",
+              "svg",
               {
-                staticClass:
-                  "absolute bottom-5 right-5 text-first text-2xl font-medium",
+                staticClass: "text-first h-12 w-12",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  stroke: "currentColor",
+                },
               },
-              [_vm._v(_vm._s(category.name))]
+              [
+                _c("path", {
+                  attrs: {
+                    d: "M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z",
+                  },
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  attrs: {
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "2",
+                    d: "M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0",
+                  },
+                }),
+              ]
             ),
-          ])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c("button", { staticClass: "absolute top-1/2 left-0" }, [
-        _c(
-          "svg",
-          {
-            staticClass: "text-gray-500 h-8 w-8",
-            attrs: {
-              xmlns: "http://www.w3.org/2000/svg",
-              fill: "none",
-              viewBox: "0 0 24 24",
-              stroke: "currentColor",
-            },
-          },
-          [
-            _c("path", {
-              attrs: {
-                "stroke-linecap": "round",
-                "stroke-linejoin": "round",
-                "stroke-width": "2",
-                d: "M15 19l-7-7 7-7",
-              },
-            }),
-          ]
-        ),
-      ]),
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass:
-          "flex justify-evenly border-2 border-gray-400 my-2 mx-4 py-4",
-      },
-      [
-        _c("div", [
-          _c(
-            "svg",
-            {
-              staticClass: "text-first h-12 w-12",
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
-              },
-            },
-            [
-              _c("path", {
-                attrs: {
-                  d: "M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z",
-                },
-              }),
-              _vm._v(" "),
-              _c("path", {
-                attrs: {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0",
-                },
-              }),
-            ]
-          ),
-          _vm._v(" "),
-          _c("h1", { staticClass: "text-2xl font-medium capitalize" }, [
-            _vm._v("free delivery"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-xl text-gray-600" }, [
-            _vm._v("for all orders over $1000"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "svg",
-            {
-              staticClass: "text-first h-12 w-12",
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
-              },
-            },
-            [
-              _c("path", {
-                attrs: {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-                },
-              }),
-            ]
-          ),
-          _vm._v(" "),
-          _c("h1", { staticClass: "text-2xl font-medium capitalize" }, [
-            _vm._v("90 days return"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-xl text-gray-600" }, [
-            _vm._v("if goods have problems"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "svg",
-            {
-              staticClass: "text-first h-12 w-12",
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
-              },
-            },
-            [
-              _c("path", {
-                attrs: {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
-                },
-              }),
-            ]
-          ),
-          _vm._v(" "),
-          _c("h1", { staticClass: "text-2xl font-medium capitalize" }, [
-            _vm._v("secure payment"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-xl text-gray-600" }, [
-            _vm._v("100% secure payment"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "svg",
-            {
-              staticClass: "text-first h-12 w-12",
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
-              },
-            },
-            [
-              _c("path", {
-                attrs: {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",
-                },
-              }),
-            ]
-          ),
-          _vm._v(" "),
-          _c("h1", { staticClass: "text-2xl font-medium capitalize" }, [
-            _vm._v("24/7 support"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-xl text-gray-600" }, [
-            _vm._v("dedicated support"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "svg",
-            {
-              staticClass: "text-first h-12 w-12",
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
-              },
-            },
-            [
-              _c("path", {
-                attrs: {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7",
-                },
-              }),
-            ]
-          ),
-          _vm._v(" "),
-          _c("h1", { staticClass: "text-2xl font-medium capitalize" }, [
-            _vm._v("gift service"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-xl text-gray-600" }, [
-            _vm._v("support gift service"),
-          ]),
-        ]),
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      _vm._l(_vm.categories, function (category) {
-        return _c(
-          "div",
-          { key: category.id },
-          [
-            _c("h1", { staticClass: "text-gray-700 font-semibold text-2xl" }, [
-              _vm._v(_vm._s(category.name)),
+            _vm._v(" "),
+            _c("h1", { staticClass: "text-2xl capitalize" }, [
+              _vm._v("free delivery"),
             ]),
             _vm._v(" "),
+            _c("p", { staticClass: "text-xl text-gray-600" }, [
+              _vm._v("for all orders over $1000"),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "svg",
+              {
+                staticClass: "text-first h-12 w-12",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  stroke: "currentColor",
+                },
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "2",
+                    d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                  },
+                }),
+              ]
+            ),
+            _vm._v(" "),
+            _c("h1", { staticClass: "text-2xl capitalize" }, [
+              _vm._v("90 days return"),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-xl text-gray-600" }, [
+              _vm._v("if goods have problems"),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "svg",
+              {
+                staticClass: "text-first h-12 w-12",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  stroke: "currentColor",
+                },
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "2",
+                    d: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
+                  },
+                }),
+              ]
+            ),
+            _vm._v(" "),
+            _c("h1", { staticClass: "text-2xl capitalize" }, [
+              _vm._v("secure payment"),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-xl text-gray-600" }, [
+              _vm._v("100% secure payment"),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "svg",
+              {
+                staticClass: "text-first h-12 w-12",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  stroke: "currentColor",
+                },
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "2",
+                    d: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",
+                  },
+                }),
+              ]
+            ),
+            _vm._v(" "),
+            _c("h1", { staticClass: "text-2xl capitalize" }, [
+              _vm._v("24/7 support"),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-xl text-gray-600" }, [
+              _vm._v("dedicated support"),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "svg",
+              {
+                staticClass: "text-first h-12 w-12",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  stroke: "currentColor",
+                },
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "2",
+                    d: "M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7",
+                  },
+                }),
+              ]
+            ),
+            _vm._v(" "),
+            _c("h1", { staticClass: "text-2xl capitalize" }, [
+              _vm._v("gift service"),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-xl text-gray-600" }, [
+              _vm._v("support gift service"),
+            ]),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.categories, function (category) {
+        return _c("div", { key: category.id }, [
+          _c(
+            "h1",
+            { staticClass: "text-gray-700 capitalize font-semibold text-2xl" },
+            [_vm._v(_vm._s(category.name))]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex" },
             _vm._l(category.products, function (product) {
-              return _c("div", { key: product.id, staticClass: "flex" }, [
+              return _c("div", { key: product.id }, [
                 _c("div", { staticClass: "m-2 hover:shadow-xl" }, [
                   _c("img", {
-                    staticClass: "w-48",
+                    staticClass: "w-64",
                     attrs: { src: "/storage/logo/delivery.jpg" },
                   }),
                   _vm._v(" "),
                   _c("div", [
-                    _c("p", [_vm._v(_vm._s(product.name))]),
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "text-xl text-gray-500 text-center border-b-2 border-gray-400",
+                      },
+                      [_vm._v(_vm._s(product.name))]
+                    ),
                     _vm._v(" "),
-                    _c("p", [_vm._v("$" + _vm._s(product.price))]),
+                    _c("p", { staticClass: "text-first text-xl text-center" }, [
+                      _vm._v("$" + _vm._s(product.price)),
+                    ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(product.name))]),
+                    _c(
+                      "p",
+                      { staticClass: "text-blue-500 text-xl text-center" },
+                      [_vm._v(_vm._s(product.name))]
+                    ),
                   ]),
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "flex" },
+                    { staticClass: "flex mx-auto" },
                     [
                       _c("addtocart-component"),
                       _vm._v(" "),
                       _c("showproduct-component"),
                       _vm._v(" "),
                       _c("likeproduct-component"),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "text-gray-500 h-5 w-5 mx-1.5",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor",
+                          },
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d: "M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z",
+                            },
+                          }),
+                        ]
+                      ),
                     ],
                     1
                   ),
                 ]),
               ])
             }),
-          ],
-          2
-        )
+            0
+          ),
+        ])
       }),
-      0
-    ),
-  ])
+    ],
+    2
+  )
 }
 var staticRenderFns = [
   function () {
@@ -39927,7 +39972,7 @@ var render = function () {
       _c(
         "svg",
         {
-          staticClass: "text-gray-500 h-6 w-6",
+          staticClass: "text-gray-500 h-5 w-5 mx-1.5",
           attrs: {
             xmlns: "http://www.w3.org/2000/svg",
             fill: "none",
@@ -39977,7 +40022,7 @@ var render = function () {
       _c(
         "svg",
         {
-          staticClass: "text-gray-500 h-6 w-6",
+          staticClass: "text-gray-500 h-5 w-5 mx-1.5",
           attrs: {
             xmlns: "http://www.w3.org/2000/svg",
             fill: "none",

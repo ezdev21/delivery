@@ -47,7 +47,9 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+      $id=$product->category_id;
+      $recommendedProducts=Product::where('category_id',$id)->latest()->get();
+      return view('product.show',compact('product','recommendedProducts'));
     }
 
     /**
