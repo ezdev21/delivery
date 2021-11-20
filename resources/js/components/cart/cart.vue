@@ -6,7 +6,7 @@
     </svg>
    <span class="absolute -bottom-1 -right-2 w-6 h-6 font-semibold text-white rounded-full bg-green-700 text-white">2</span>
    </button>
-   <div v-if="cartPopup" class="fixed z-20 bg-white text-gray-700">
+   <!-- <div v-if="cartPopup" class="fixed z-20 bg-white text-gray-700">
     <ul>
     <li v-for="cartItem in cartItems" :key="cartItem.id" class="hover:bg-gray-200 px-5">
       <a :href="'/product/show/'+cartItem.id">
@@ -18,7 +18,7 @@
       </a>
     </li>
     </ul>    
-   </div>
+   </div> -->
    <!-- <div v-if="cartPopup" @click="cartPopup=false" class="absolute z-10 -inset-0 bg-black opacity-50"></div> -->
   </div> 
 </template>
@@ -40,12 +40,12 @@ export default {
     })
   },
   created(){
-   bus.$on('productAddedToCart',id=>{
-     addToCart(id);
-   });
-   bus.$on('productRemovedFromCart',id=>{
-     removeFromCart(id);
-   });
+  //  bus.$on('productAddedToCart',id=>{
+  //    addToCart(id);
+  //  });
+  //  bus.$on('productRemovedFromCart',id=>{
+  //    removeFromCart(id);
+  //  });
   },
   methods:{
    addToCart(id){

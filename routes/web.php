@@ -5,7 +5,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\OrderController;
-
+use App\Http\Controllers\UserContrller;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -45,4 +46,8 @@ Route::prefix('order')->group(function(){
 
 Route::prefix('admin')->group(function(){
   Route::get('/',[AdminController::class,'']);
+});
+
+Route::prefix('user')->group(function(){
+  Route::get('notifications',[UserController::class,'notifications']);
 });

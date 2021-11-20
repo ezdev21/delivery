@@ -6,14 +6,14 @@
    </svg>
    <span class="absolute -bottom-1 -right-2 w-6 h-6 font-semibold text-white rounded-full bg-green-700 text-white">1</span>
   </button>
-   <div v-if="notificationPopup" class="fixed bg-gray-100 z-20 text-xl m-2 rounded-md p-2">
+   <!-- <div v-if="notificationPopup" class="bg-gray-100 z-20 text-xl m-2 rounded-md p-2">
     <ul>
      <li v-for="notification in notifications" :key="notification.id" class="hover:bg-blue-200">
       <a :href="notification.data.href">{{notification.data.data}}</a>
       <button @click="readNotification(notification.id)">x</button>    
      </li>    
     </ul> 
-   </div>
+   </div> -->
 <!-- <div v-if="notificationPopup" @click="notificationPopup=false" class="absolute -inset-0 opacity-50 bg-black z-10"></div>  -->
   </div>  
 </template>

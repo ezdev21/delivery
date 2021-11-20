@@ -21,7 +21,7 @@
        </button>   
       </form>
     </div>
-    <div class="my-auto flex mx-14">
+    <div class="my-auto flex mx-12">
       <div>
        <likedproducts-component :userId="userId"/>   
       </div>
@@ -48,7 +48,7 @@
         </svg>
        </button>   
      </div>
-     <div v-else class="flex text-white text-xl w-full my-auto">
+     <div v-else class="flex font-medium text-white text-xl w-full my-auto">
      <a href="/login" class="mx-2 rounded px-2 py-1 my-auto">sign in</a>
      <a href="/register" class="bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto">sign up</a>  
      </div> 
@@ -65,7 +65,7 @@
        </li>  
       </ul>
      </div>
-     <div v-if="userDropdownMenu" @click="userDropdownMenu=false" class="absolute z-10 -inset-y-0 -inset-x-0 bg-black opacity-50"></div>
+     <!-- <div v-if="userDropdownMenu" @click="userDropdownMenu=false" class="absolute z-10 -inset-y-0 -inset-x-0 bg-black opacity-50"></div> -->
     </div> 
    </div>
    <div class="py-2 my-auto flex justify-between">
@@ -86,7 +86,7 @@
        <li class="mx-4 "><a class="mx-auto text-black no-underline" href="/">Suppliers</a></li>
       </ul>
     </div>
-    <div class="text-xl">
+    <div class="my-auto text-xl">
      <ul class="flex">
        <li class="mx-3">
          <button>

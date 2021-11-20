@@ -2111,13 +2111,12 @@ __webpack_require__.r(__webpack_exports__);
       _this.cartItems = res.data.cartItems;
     });
   },
-  created: function created() {
-    bus.$on('productAddedToCart', function (id) {
-      addToCart(id);
-    });
-    bus.$on('productRemovedFromCart', function (id) {
-      removeFromCart(id);
-    });
+  created: function created() {//  bus.$on('productAddedToCart',id=>{
+    //    addToCart(id);
+    //  });
+    //  bus.$on('productRemovedFromCart',id=>{
+    //    removeFromCart(id);
+    //  });
   },
   methods: {
     addToCart: function addToCart(id) {
@@ -38197,35 +38196,6 @@ var render = function () {
         ),
       ]
     ),
-    _vm._v(" "),
-    _vm.cartPopup
-      ? _c("div", { staticClass: "fixed z-20 bg-white text-gray-700" }, [
-          _c(
-            "ul",
-            _vm._l(_vm.cartItems, function (cartItem) {
-              return _c(
-                "li",
-                { key: cartItem.id, staticClass: "hover:bg-gray-200 px-5" },
-                [
-                  _c("a", { attrs: { href: "/product/show/" + cartItem.id } }, [
-                    _c("div", { staticClass: "m-2 p-2" }, [
-                      _c("img", {
-                        staticClass: "w-48",
-                        attrs: { src: "/storage/products/" + cartItem.cover },
-                      }),
-                      _vm._v(" "),
-                      _c("p", [_vm._v(_vm._s(cartItem.name))]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v(_vm._s(cartItem.description))]),
-                    ]),
-                  ]),
-                ]
-              )
-            }),
-            0
-          ),
-        ])
-      : _vm._e(),
   ])
 }
 var staticRenderFns = []
@@ -38445,7 +38415,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "my-auto flex mx-14" }, [
+            _c("div", { staticClass: "my-auto flex mx-12" }, [
               _c(
                 "div",
                 [
@@ -38555,7 +38525,10 @@ var render = function () {
                   ])
                 : _c(
                     "div",
-                    { staticClass: "flex text-white text-xl w-full my-auto" },
+                    {
+                      staticClass:
+                        "flex font-medium text-white text-xl w-full my-auto",
+                    },
                     [
                       _c(
                         "a",
@@ -38570,7 +38543,7 @@ var render = function () {
                         "a",
                         {
                           staticClass:
-                            "bg-green-700 mx-2  rounded-3xl px-5 py-1.5 my-auto",
+                            "bg-green-700 mx-2  rounded-3xl px-4 py-1.5 my-auto",
                           attrs: { href: "/register" },
                         },
                         [_vm._v("sign up")]
@@ -38611,18 +38584,6 @@ var render = function () {
                       ]),
                     ]
                   )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.userDropdownMenu
-                ? _c("div", {
-                    staticClass:
-                      "absolute z-10 -inset-y-0 -inset-x-0 bg-black opacity-50",
-                    on: {
-                      click: function ($event) {
-                        _vm.userDropdownMenu = false
-                      },
-                    },
-                  })
                 : _vm._e(),
             ]),
           ]
@@ -38675,7 +38636,7 @@ var render = function () {
           _vm._v(" "),
           _vm._m(6),
           _vm._v(" "),
-          _c("div", { staticClass: "text-xl" }, [
+          _c("div", { staticClass: "my-auto text-xl" }, [
             _c("ul", { staticClass: "flex" }, [
               _vm._m(7),
               _vm._v(" "),
@@ -38891,53 +38852,6 @@ var render = function () {
         ),
       ]
     ),
-    _vm._v(" "),
-    _vm.notificationPopup
-      ? _c(
-          "div",
-          { staticClass: "fixed bg-gray-100 z-20 text-xl m-2 rounded-md p-2" },
-          [
-            _c(
-              "ul",
-              _vm._l(_vm.notifications, function (notification) {
-                return _c(
-                  "li",
-                  { key: notification.id, staticClass: "hover:bg-blue-200" },
-                  [
-                    _c("a", { attrs: { href: notification.data.href } }, [
-                      _vm._v(_vm._s(notification.data.data)),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        on: {
-                          click: function ($event) {
-                            return _vm.readNotification(notification.id)
-                          },
-                        },
-                      },
-                      [_vm._v("x")]
-                    ),
-                  ]
-                )
-              }),
-              0
-            ),
-          ]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.notificationPopup
-      ? _c("div", {
-          staticClass: "absolute -inset-0 opacity-50 bg-black z-10",
-          on: {
-            click: function ($event) {
-              _vm.notificationPopup = false
-            },
-          },
-        })
-      : _vm._e(),
   ])
 }
 var staticRenderFns = []
