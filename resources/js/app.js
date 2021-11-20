@@ -24,7 +24,10 @@ Vue.component('notification-component', require('./components/notification.vue')
 Vue.component('home-component', require('./components/home.vue').default);
 Vue.component('likedproducts-component', require('./components/likedproducts.vue').default);
 Vue.component('cart-component', require('./components/cart/cart.vue').default);
+Vue.component('addtocart-component', require('./components/cart/addToCart.vue').default);
 Vue.component('removefromcart-component', require('./components/cart/removeFromCart.vue').default);
+Vue.component('showproduct-component', require('./components/product/show.vue').default);
+Vue.component('likeproduct-component', require('./components/product/like.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
