@@ -18,11 +18,11 @@ export default {
       poducts:[]  
     }  
   },
-  created(){
+  beforeCreated(){
 
   },
   methods:{
-      
+
   }  
 }
 </script>

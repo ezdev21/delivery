@@ -21,10 +21,10 @@ window.Vue = require('vue').default;
 
 Vue.component('navigation-component', require('./components/navigation.vue').default);
 Vue.component('notification-component', require('./components/notification.vue').default);
-Vue.component('customer-component', require('./components/customer.vue').default);
-Vue.component('likedproducts-component', require('./components/likedproducts.vue').default);
-Vue.component('cart-component', require('./components/cart.vue').default);
 
+Vue.component('likedproducts-component', require('./components/likedproducts.vue').default);
+Vue.component('cart-component', require('./components/cart/cart.vue').default);
+Vue.component('removefromcart-component', require('./components/cart/removeFromCart.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
