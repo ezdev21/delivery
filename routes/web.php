@@ -28,12 +28,16 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::prefix('category')->group(function(){
+  Route::get('index',[ProductController::class,'index']);
+});
+
 Route::prefix('product')->group(function(){
   Route::post('search',[ProductController::class,'search'])->name('product.search');
 });
 
 Route::prefix('cart')->group(function(){
-  Route::post('cartitems',[ProductController::class,'cartItems']);
+  Route::get('cartitems',[ProductController::class,'cartItems']);
 });
 
 Route::prefix('customer')->group(function(){
