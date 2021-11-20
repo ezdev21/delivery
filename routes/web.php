@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\VendorController;
@@ -29,7 +30,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('category')->group(function(){
-  Route::get('index',[ProductController::class,'index']);
+  Route::get('index',[CategoryController::class,'index']);
 });
 
 Route::prefix('product')->group(function(){

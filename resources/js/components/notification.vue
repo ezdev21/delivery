@@ -28,14 +28,14 @@ export default {
     }   
    },
    mounted(){
-     axios.get('/notifications',{params:{userId:this.userId}})
+     axios.get('/user/notifications',{params:{userId:this.userId}})
      .then(res=>{
         this.notifications=res.data.notifications;
      })  
    },
    methods:{
      unreadNotification(notificationId){
-       axios.post('/notification/unread',{notificationId:notificationId,userId:this.userId})
+       axios.post('/user/notification/unread',{notificationId:notificationId,userId:this.userId})
        .then(res=>{
           let index=notifications.findindex(item=> item.id==notificationId)
           this.notifications.splice(index,1); 

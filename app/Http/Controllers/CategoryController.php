@@ -14,8 +14,9 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {  
+      $categories=Category::withCount('products')->orderBy('products_count')->get();
+      return response()->json(['categories'=>$categories]);
     }
 
     /**

@@ -34,7 +34,7 @@ export default {
    }
   },
   mounted(){
-    axios.get('/cartitems',{params:{userId:this.userId}})
+    axios.get('/cart/cartitems',{params:{userId:this.userId}})
     .then(res=>{
       this.cartItems=res.data.cartItems;
     })
