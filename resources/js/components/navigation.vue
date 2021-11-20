@@ -23,10 +23,10 @@
     </div>
     <div class="my-auto flex mx-14">
       <div>
-       <saved-component :userId="userId"/>   
+       <likedproducts-component :userId="userId"/>   
       </div>
       <div>
-       <notifications-component :userId="userId"/>   
+       <notification-component :userId="userId"/>   
       </div> 
       <div>
         <cart-component :userId="userId"/>   

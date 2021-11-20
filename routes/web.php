@@ -1,7 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\VendorController;
+use App\Http\Controllers\OrderController;
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +26,23 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('product')->group(function(){
+  Route::post('search',[ProductController::class,'search'])->name('product.search');
+});
+
+Route::prefix('customer')->group(function(){
+  Route::post('search',[CustomerController::class,'search']);
+});
+
+Route::prefix('vendor')->group(function(){
+  Route::post('search',[VendorController::class,'search']);
+});
+
+Route::prefix('order')->group(function(){
+  Route::post('search',[OrderController::class,'search']);
+});
+
+Route::prefix('admin')->group(function(){
+  Route::get('/',[AdminController::class,'']);
+});
