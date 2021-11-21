@@ -1,4 +1,6 @@
 @extends('layouts.app')
 @section('content')
- chat   
+ <div class="m-4">
+  <message-component/>
+ </div>   
 @endsection

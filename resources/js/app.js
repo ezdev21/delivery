@@ -30,6 +30,9 @@ Vue.component('showproduct-component', require('./components/product/show.vue').
 Vue.component('likeproduct-component', require('./components/product/like.vue').default);
 Vue.component('comment-component', require('./components/product/comment.vue').default);
 Vue.component('rate-component', require('./components/product/rate.vue').default);
+Vue.component('chat-component', require('./components/chat/chat.vue').default);
+Vue.component('friends-component', require('./components/chat/friends.vue').default);
+Vue.component('message-component', require('./components/chat/message.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
