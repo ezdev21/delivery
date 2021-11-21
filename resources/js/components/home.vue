@@ -3,13 +3,13 @@
  <div class="flex">
    <div class="w-2/3 relative m-2">
     <button class="absolute top-1/2 left-0">
-     <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-600 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+     <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
      </svg>
     </button>
     <img class="w-full" src="storage/logo/delivery.jpg">
     <button class="absolute top-1/2 right-0">
-     <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-600 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+     <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
      </svg>
     </button>
