@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100">
  <div id="app">
     <div>
         <form id="search-form" action="{{route('product.search')}}" class="hidden">

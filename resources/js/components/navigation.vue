@@ -1,10 +1,10 @@
 <template>
  <div class="flex justify-evenly bg-first w-full py-1">
-  <div class="">
+  <a href="/" class="">
    <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-32 w-32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
    </svg>
-  </div>
+  </a>
   <div class="py-1">
     <div class="flex justify-between py-2 border-b-2 border-green-600">
     <div class="rounded-4xl my-auto py-auto mr-5">
@@ -80,21 +80,21 @@
     </div>
     <div class="text-lg my-auto">
       <ul class="flex my-auto">
-       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-blue-500 mx-auto text-black no-underline" href="/">Home</a></li>
-       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-blue-500 mx-auto text-black no-underline" href="/">News</a></li>
-       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-blue-500 mx-auto text-black no-underline" href="/">Vendors</a></li>
-       <li class="mx-4 "><a class="no-underline hover:no-underline hover:text-blue-500 mx-auto text-black no-underline" href="/">Suppliers</a></li>
+       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-blue-700 mx-auto text-black no-underline" href="/">Home</a></li>
+       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-blue-700 mx-auto text-black no-underline" href="/">News</a></li>
+       <li class="mx-4"><a class="no-underline hover:no-underline hover:text-blue-700 mx-auto text-black no-underline" href="/">Vendors</a></li>
+       <li class="mx-4 "><a class="no-underline hover:no-underline hover:text-blue-700 mx-auto text-black no-underline" href="/">Suppliers</a></li>
       </ul>
     </div>
     <div class="my-auto text-xl">
      <ul class="flex">
        <li class="mx-3">
-         <a href="#" class="no-underline hover:no-underline hover:text-blue-500">
+         <a href="#" class="no-underline hover:no-underline hover:text-blue-700">
            Become a Seller
          </a>
        </li>
        <li>
-        <a href="#" class="flex no-underline hover:no-underline hover:text-blue-500">
+        <a href="#" class="flex no-underline hover:no-underline hover:text-blue-700">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>

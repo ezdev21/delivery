@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Chat;
-use App\Http\Requests\StoreChatRequest;
-use App\Http\Requests\UpdateChatRequest;
+use App\Models\Comment;
+use App\Http\Requests\StoreCommentRequest;
+use App\Http\Requests\UpdateCommentRequest;
 
-class ChatController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class ChatController extends Controller
      */
     public function index()
     {
-        return view('chat');
+        //
     }
 
     /**
@@ -31,10 +31,10 @@ class ChatController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreChatRequest  $request
+     * @param  \App\Http\Requests\StoreCommentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreChatRequest $request)
+    public function store(StoreCommentRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class ChatController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Chat  $chat
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function show(Chat $chat)
+    public function show(Comment $comment)
     {
         //
     }
@@ -53,10 +53,10 @@ class ChatController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Chat  $chat
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Chat $chat)
+    public function edit(Comment $comment)
     {
         //
     }
@@ -64,11 +64,11 @@ class ChatController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateChatRequest  $request
-     * @param  \App\Models\Chat  $chat
+     * @param  \App\Http\Requests\UpdateCommentRequest  $request
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateChatRequest $request, Chat $chat)
+    public function update(UpdateCommentRequest $request, Comment $comment)
     {
         //
     }
@@ -76,10 +76,10 @@ class ChatController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Chat  $chat
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Chat $chat)
+    public function destroy(Comment $comment)
     {
         //
     }
