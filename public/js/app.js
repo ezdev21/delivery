@@ -2232,14 +2232,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    messages: messages,
-    friends: _friends_vue__WEBPACK_IMPORTED_MODULE_1__.friends
+    message: _message_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    friends: _friends_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   props: ['userId'],
   data: function data() {
     return {
       text: '',
-      message: {},
       messages: []
     };
   },
@@ -2776,9 +2775,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: {
-    productId: productId
-  },
+  props: ['productId'],
   data: function data() {
     return {
       name: '',
@@ -2911,8 +2908,13 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_chat_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-chat-scroll */ "./node_modules/vue-chat-scroll/dist/vue-chat-scroll.js");
+/* harmony import */ var vue_chat_scroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_chat_scroll__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -2921,6 +2923,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
+
+
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].use((vue_chat_scroll__WEBPACK_IMPORTED_MODULE_0___default()));
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -2931,27 +2936,27 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('navigation-component', (__webpack_require__(/*! ./components/navigation.vue */ "./resources/js/components/navigation.vue")["default"]));
-Vue.component('notification-component', (__webpack_require__(/*! ./components/notification.vue */ "./resources/js/components/notification.vue")["default"]));
-Vue.component('home-component', (__webpack_require__(/*! ./components/home.vue */ "./resources/js/components/home.vue")["default"]));
-Vue.component('likedproducts-component', (__webpack_require__(/*! ./components/likedproducts.vue */ "./resources/js/components/likedproducts.vue")["default"]));
-Vue.component('cart-component', (__webpack_require__(/*! ./components/cart/cart.vue */ "./resources/js/components/cart/cart.vue")["default"]));
-Vue.component('addtocart-component', (__webpack_require__(/*! ./components/cart/addToCart.vue */ "./resources/js/components/cart/addToCart.vue")["default"]));
-Vue.component('removefromcart-component', (__webpack_require__(/*! ./components/cart/removeFromCart.vue */ "./resources/js/components/cart/removeFromCart.vue")["default"]));
-Vue.component('showproduct-component', (__webpack_require__(/*! ./components/product/show.vue */ "./resources/js/components/product/show.vue")["default"]));
-Vue.component('likeproduct-component', (__webpack_require__(/*! ./components/product/like.vue */ "./resources/js/components/product/like.vue")["default"]));
-Vue.component('comment-component', (__webpack_require__(/*! ./components/product/comment.vue */ "./resources/js/components/product/comment.vue")["default"]));
-Vue.component('rate-component', (__webpack_require__(/*! ./components/product/rate.vue */ "./resources/js/components/product/rate.vue")["default"]));
-Vue.component('chat-component', (__webpack_require__(/*! ./components/chat/chat.vue */ "./resources/js/components/chat/chat.vue")["default"]));
-Vue.component('friends-component', (__webpack_require__(/*! ./components/chat/friends.vue */ "./resources/js/components/chat/friends.vue")["default"]));
-Vue.component('message-component', (__webpack_require__(/*! ./components/chat/message.vue */ "./resources/js/components/chat/message.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('navigation-component', (__webpack_require__(/*! ./components/navigation.vue */ "./resources/js/components/navigation.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('notification-component', (__webpack_require__(/*! ./components/notification.vue */ "./resources/js/components/notification.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('home-component', (__webpack_require__(/*! ./components/home.vue */ "./resources/js/components/home.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('likedproducts-component', (__webpack_require__(/*! ./components/likedproducts.vue */ "./resources/js/components/likedproducts.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('cart-component', (__webpack_require__(/*! ./components/cart/cart.vue */ "./resources/js/components/cart/cart.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('addtocart-component', (__webpack_require__(/*! ./components/cart/addToCart.vue */ "./resources/js/components/cart/addToCart.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('removefromcart-component', (__webpack_require__(/*! ./components/cart/removeFromCart.vue */ "./resources/js/components/cart/removeFromCart.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('showproduct-component', (__webpack_require__(/*! ./components/product/show.vue */ "./resources/js/components/product/show.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('likeproduct-component', (__webpack_require__(/*! ./components/product/like.vue */ "./resources/js/components/product/like.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('comment-component', (__webpack_require__(/*! ./components/product/comment.vue */ "./resources/js/components/product/comment.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('rate-component', (__webpack_require__(/*! ./components/product/rate.vue */ "./resources/js/components/product/rate.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('chat-component', (__webpack_require__(/*! ./components/chat/chat.vue */ "./resources/js/components/chat/chat.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('friends-component', (__webpack_require__(/*! ./components/chat/friends.vue */ "./resources/js/components/chat/friends.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('message-component', (__webpack_require__(/*! ./components/chat/message.vue */ "./resources/js/components/chat/message.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var app = new Vue({
+var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
   el: '#app'
 });
 
@@ -38728,6 +38733,99 @@ module.exports = function (list, options) {
     lastIdentifiers = newLastIdentifiers;
   };
 };
+
+/***/ }),
+
+/***/ "./node_modules/vue-chat-scroll/dist/vue-chat-scroll.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/vue-chat-scroll/dist/vue-chat-scroll.js ***!
+  \**************************************************************/
+/***/ (function(module) {
+
+(function (global, factory) {
+   true ? module.exports = factory() :
+  0;
+}(this, (function () { 'use strict';
+
+  /**
+  * @name VueJS vChatScroll (vue-chat-scroll)
+  * @description Monitors an element and scrolls to the bottom if a new child is added
+  * @author Theodore Messinezis <theo@theomessin.com>
+  * @file v-chat-scroll  directive definition
+  */
+  var scrollToBottom = function scrollToBottom(el, smooth) {
+    if (typeof el.scroll === "function") {
+      el.scroll({
+        top: el.scrollHeight,
+        behavior: smooth ? 'smooth' : 'instant'
+      });
+    } else {
+      el.scrollTop = el.scrollHeight;
+    }
+  };
+
+  var vChatScroll = {
+    bind: function bind(el, binding) {
+      var scrolled = false;
+      el.addEventListener('scroll', function (e) {
+        scrolled = el.scrollTop + el.clientHeight + 1 < el.scrollHeight;
+
+        if (scrolled && el.scrollTop === 0) {
+          el.dispatchEvent(new Event("v-chat-scroll-top-reached"));
+        }
+      });
+      new MutationObserver(function (e) {
+        var config = binding.value || {};
+        if (config.enabled === false) return;
+        var pause = config.always === false && scrolled;
+        var addedNodes = e[e.length - 1].addedNodes.length;
+        var removedNodes = e[e.length - 1].removedNodes.length;
+
+        if (config.scrollonremoved) {
+          if (pause || addedNodes != 1 && removedNodes != 1) return;
+        } else {
+          if (pause || addedNodes != 1) return;
+        }
+
+        var smooth = config.smooth;
+        var loadingRemoved = !addedNodes && removedNodes === 1;
+
+        if (loadingRemoved && config.scrollonremoved && 'smoothonremoved' in config) {
+          smooth = config.smoothonremoved;
+        }
+
+        scrollToBottom(el, smooth);
+      }).observe(el, {
+        childList: true,
+        subtree: true
+      });
+    },
+    inserted: function inserted(el, binding) {
+      var config = binding.value || {};
+      scrollToBottom(el, config.notSmoothOnInit ? false : config.smooth);
+    }
+  };
+
+  /**
+  * @name VueJS vChatScroll (vue-chat-scroll)
+  * @description Monitors an element and scrolls to the bottom if a new child is added
+  * @author Theodore Messinezis <theo@theomessin.com>
+  * @file vue-chat-scroll plugin definition
+  */
+  var VueChatScroll = {
+    install: function install(Vue, options) {
+      Vue.directive('chat-scroll', vChatScroll);
+    }
+  };
+
+  if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.use(VueChatScroll);
+  }
+
+  return VueChatScroll;
+
+})));
+
 
 /***/ }),
 

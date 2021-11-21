@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('category_id');
             $table->foreignId('vendor_id');
             $table->string('name');
+            $table->unsignedInteger('price');
             $table->unsignedInteger('quantity');
             $table->string('photo')->nullable();
             $table->string('slug')->unique()->nullable();

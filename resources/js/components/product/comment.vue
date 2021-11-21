@@ -9,9 +9,7 @@
 </template>
 <script>
 export default {
- props:{
-  productId
- },
+ props:['productId'],
  data(){
   return{
    name:'',

@@ -25,6 +25,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "tailwindcss": "^2.2.19"
+        "tailwindcss": "^2.2.19",
+        "vue-chat-scroll": "^1.4.0"
     }
 }

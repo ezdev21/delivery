@@ -7,7 +7,10 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-
+ 
+import Vue from "vue";
+import VueChatScroll from "vue-chat-scroll";
+Vue.use(VueChatScroll);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -23,13 +26,16 @@ Vue.component('navigation-component', require('./components/navigation.vue').def
 Vue.component('notification-component', require('./components/notification.vue').default);
 Vue.component('home-component', require('./components/home.vue').default);
 Vue.component('likedproducts-component', require('./components/likedproducts.vue').default);
+
 Vue.component('cart-component', require('./components/cart/cart.vue').default);
 Vue.component('addtocart-component', require('./components/cart/addToCart.vue').default);
 Vue.component('removefromcart-component', require('./components/cart/removeFromCart.vue').default);
+
 Vue.component('showproduct-component', require('./components/product/show.vue').default);
 Vue.component('likeproduct-component', require('./components/product/like.vue').default);
 Vue.component('comment-component', require('./components/product/comment.vue').default);
 Vue.component('rate-component', require('./components/product/rate.vue').default);
+
 Vue.component('chat-component', require('./components/chat/chat.vue').default);
 Vue.component('friends-component', require('./components/chat/friends.vue').default);
 Vue.component('message-component', require('./components/chat/message.vue').default);
