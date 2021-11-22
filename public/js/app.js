@@ -2228,6 +2228,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2235,15 +2237,36 @@ __webpack_require__.r(__webpack_exports__);
     message: _message_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     friends: _friends_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
-  props: ['userId'],
   data: function data() {
     return {
       text: '',
       messages: []
     };
   },
-  mounted: function mounted() {},
-  methods: {}
+  mounted: function mounted() {
+    this.listen();
+  },
+  methods: {
+    listen: function listen() {
+      var _this = this;
+
+      Echo.channel('chat').listen('message', function () {
+        _this.messages.push(_this.text);
+
+        _this.text = '';
+        console.log('listened successfully');
+      });
+    },
+    send: function send() {
+      axios.post('/chat/test', {
+        to: 1,
+        text: this.text,
+        from: 1
+      }).then(function (res) {
+        console.log('message sent successfully');
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -46114,13 +46137,46 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("friends-component"),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.text,
+            expression: "text",
+          },
+        ],
+        staticClass: "p-2 rounded-xl w-96 border-2 border-gray-300",
+        attrs: { type: "text", required: "", placeholder: "text" },
+        domProps: { value: _vm.text },
+        on: {
+          keyup: function ($event) {
+            if (
+              !$event.type.indexOf("key") &&
+              _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+            ) {
+              return null
+            }
+            return _vm.send.apply(null, arguments)
+          },
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.text = $event.target.value
+          },
+        },
+      }),
       _vm._v(" "),
-      _c("messages-component"),
-      _vm._v(" "),
-      _c("active-component"),
+      _vm._l(_vm.messages, function (message) {
+        return _c(
+          "p",
+          { key: message, staticClass: "text-xl text-green-500" },
+          [_vm._v(_vm._s(message))]
+        )
+      }),
     ],
-    1
+    2
   )
 }
 var staticRenderFns = []
