@@ -35,6 +35,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/chat',[ChatController::class,'index']);
 Route::post('chat/test',function(Request $request){
   event(new MessageSent(1,$request->text,1));
+  return response()->json(['message'=>$request->text]);
 });
 
 Route::prefix('category')->group(function(){

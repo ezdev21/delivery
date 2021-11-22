@@ -2250,20 +2250,19 @@ __webpack_require__.r(__webpack_exports__);
     listen: function listen() {
       var _this = this;
 
-      Echo.channel('chat').listen('message', function () {
-        _this.messages.push(_this.text);
-
-        _this.text = '';
-        console.log('listened successfully');
+      Echo.channel('chat').listen('.message', function (message) {
+        _this.messages.push(message);
       });
     },
     send: function send() {
+      var _this2 = this;
+
       axios.post('/chat/test', {
         to: 1,
         text: this.text,
         from: 1
       }).then(function (res) {
-        console.log('message sent successfully');
+        _this2.text = "";
       });
     }
   }
@@ -46172,7 +46171,7 @@ var render = function () {
         return _c(
           "p",
           { key: message, staticClass: "text-xl text-green-500" },
-          [_vm._v(_vm._s(message))]
+          [_vm._v(_vm._s(message.message))]
         )
       }),
     ],
