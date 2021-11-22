@@ -22,14 +22,19 @@ export default {
    }
   },
   mounted(){
-   Echo.listen()
+  
   },
   methods:{
+   listen(){
+    Echo.channel('chat')
+    .listen('message',()=>{
+      this.messages.push(this.text);
+      this.text='';
+    });
+   }, 
    send(){
      axios.post('/chat/test',{to:1,text:this.text,from:1});
      then(res=>{
-       this.messages.push(this.text);
-       this.text='';
        console.log('message sent successfully');
      });
    }
