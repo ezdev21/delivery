@@ -4,7 +4,7 @@
   <messages-component />
   <active-component /> -->
   <input type="text" v-model="text" @keyup.enter="send" required placeholder="text" class="p-2 rounded-xl w-96 border-2 border-gray-300">
-  <p v-for="message in messages" class="text-xl text-green-500" :key="message">{{message.message}}</p>
+  <p class="text-2xl text-blue-500">{{messages.length}}</p>
  </div>
 </template>
 <script>
@@ -23,12 +23,39 @@ export default {
   },
   mounted(){
    this.listen();
+   this.joined();
+   this.listenWhisper();
+  },
+  watch:{
+    text(){
+      Echo.private('chat')
+      .whisper('typing');
+    }
   },
   methods:{
+    joined(){
+     Echo.join('chat')
+     .here((users)=>{
+      console.log('users joined');
+     })
+     .joining((user)=>{
+      console.log('some one joined the room');
+     })
+     .leaving((user)=>{
+       console.log('some one left the room');
+     });
+    },
+    listenWhisper(){
+     Echo.private('chat')
+     .listenForWhisper('typing',(e)=>{
+       this.$toaster.success('typing');
+       console.log('typing');
+     });
+    },
    listen(){
-    Echo.channel('chat')
+    Echo.private('chat')
     .listen('.message',(message)=>{
-      this.messages.push(message);
+      this.messages.unshift(message);
     });
    },
    send(){

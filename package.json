@@ -28,6 +28,7 @@
         "laravel-echo": "^1.11.3",
         "pusher-js": "^7.0.3",
         "tailwindcss": "^2.2.19",
+        "v-toaster": "^1.0.3",
         "vue-chat-scroll": "^1.4.0"
     }
 }
