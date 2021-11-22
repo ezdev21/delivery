@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\MessageSent;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ChatController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\VendorController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserContrller;
 use App\Http\Controllers\UserController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -31,6 +33,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/chat',[ChatController::class,'index']);
+Route::post('chat/test',function(Request $request){
+  event(new MessageSent(1,$request->text,1));
+});
 
 Route::prefix('category')->group(function(){
   Route::get('index',[CategoryController::class,'index']);
